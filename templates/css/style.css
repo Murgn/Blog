@@ -1,0 +1,152 @@
+:root {
+    --content-width: 1200px;
+    --columns-width: 250px;
+
+    --primary-color: #fff3f3;
+    --primary-alt-color: #9e9797;
+    --secondary-color: #a07cff;
+    --secondary-alt-color: #dc98ff;
+    --background-color: #1E1E1C;
+    --background-alt-color: #2c2c2a;
+
+    /* top, right, bottom, left */
+    --header-padding: 25px 50px 25px 50px;
+    --content-padding: 25px 50px 25px 50px;
+    --columns-padding: 25px 35px 25px 35px;
+    --footer-padding: 25px 50px 25px 50px;
+
+    --content-mobile-padding: 25px 20px 25px 20px;
+}
+
+@font-face {
+    font-family: FreePixel;
+    src: url('../Fonts/FreePixel.ttf');
+}
+
+* {
+    font-family: 'FreePixel', sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/*                                                                            */
+
+html, body {
+    font-family: 'FreePixel', sans-serif;
+    margin: 0;
+    height: 100%;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+a {
+    color: var(--secondary-color);
+}
+
+a:hover {
+    color: var(--secondary-alt-color);
+}
+
+ul {
+    list-style-type: "// ";
+}
+
+li::marker {
+    color: var(--primary-alt-color);
+}
+
+span {
+    color: var(--primary-alt-color);
+}
+
+code {
+    background-color: var(--background-color);
+    padding: 3px 7px 3px 7px;
+}
+
+code.hljs{
+    font-family: 'FreePixel', sans-serif;
+    background-color: var(--background-color);
+    border-radius: 10px;
+}
+
+#container {
+    max-width: var(--content-width);
+    min-height: 100%;
+    display: flex;
+    flex-flow: column;
+    margin: 0 auto;
+    background-color: var(--background-alt-color);
+}
+
+#flex {
+    display: flex;
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+}
+
+/*                                                                            */
+
+#header {
+    width: 100%;
+    padding: var(--header-padding);
+    text-align: center;
+}
+
+aside{
+    width: var(--columns-width);
+    padding: var(--columns-padding);
+}
+
+#leftSidebar {
+    order: 1;
+}
+
+main {
+    order: 2;
+    flex: 1;
+    padding: var(--content-padding);
+}
+
+#rightSidebar {
+    order: 3;
+}
+
+footer {
+    width: 100%;
+    padding: var(--footer-padding);
+    text-align: center;
+}
+
+/*                                                                            */
+
+@media only screen and (max-width: 800px) {
+    #flex {
+        flex-wrap: wrap;
+    }
+
+    main, aside {
+        width: 100%;
+    }
+
+    main {
+        order: 1;
+        padding: var(--content-mobile-padding);
+    }
+
+    aside {
+        /* Can enable or disable depending on if you want sidebars to be hidden on smaller resolution*/
+        /*display: none;*/
+    }
+
+    #leftSidebar {
+        order: 2;
+    }
+
+    #rightSidebar {
+        order: 3;
+    }
+}
