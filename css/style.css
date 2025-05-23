@@ -1,6 +1,6 @@
 :root {
     --content-width: 1200px;
-    --columns-width: 250px;
+    --columns-width: 300px;
 
     --primary-color: #fff3f3;
     --primary-alt-color: #9e9797;
@@ -11,16 +11,17 @@
 
     /* top, right, bottom, left */
     --header-padding: 25px 50px 25px 50px;
-    --content-padding: 25px 50px 25px 50px;
+    --content-padding: 25px 25px 25px 25px;
     --columns-padding: 25px 35px 25px 35px;
-    --footer-padding: 25px 50px 25px 50px;
+    --footer-padding: 10px 50px 10px 50px;
 
     --content-mobile-padding: 25px 20px 25px 20px;
+    --header-mobile-padding: 25px 25px 25px 25px;
 }
 
 @font-face {
     font-family: FreePixel;
-    src: url('../Fonts/FreePixel.ttf');
+    src: url('../fonts/FreePixel.ttf');
 }
 
 * {
@@ -39,6 +40,11 @@ html, body {
     height: 100%;
     background-color: var(--background-color);
     color: var(--primary-color);
+}
+
+p {
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 
 a {
@@ -88,12 +94,25 @@ code.hljs{
     overflow: hidden;
 }
 
+.horizontal-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.horizontal-list li {
+    margin-right: 2.1em;
+}
+
 /*                                                                            */
 
 #header {
     width: 100%;
     padding: var(--header-padding);
-    text-align: center;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 aside{
@@ -124,8 +143,24 @@ footer {
 /*                                                                            */
 
 @media only screen and (max-width: 800px) {
+    
+    #header{
+        padding: var(--header-mobile-padding);
+    }
+    
     #flex {
         flex-wrap: wrap;
+    }
+
+    .horizontal-list {
+        display: block;
+        padding-left: 40px;
+        margin: initial;
+    }
+
+    .horizontal-list li {
+        display: list-item;
+        margin: 0;
     }
 
     main, aside {
@@ -140,6 +175,7 @@ footer {
     aside {
         /* Can enable or disable depending on if you want sidebars to be hidden on smaller resolution*/
         /*display: none;*/
+        font-size: 100%;
     }
 
     #leftSidebar {
