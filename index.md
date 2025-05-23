@@ -1,9 +1,10 @@
 ---
-title: Index
+title: welcome.txt
 date: 22nd May, 2025
 ---
 
-# {{ title }}
+# {{ title }} ˙ ͜ʟ˙
+
 Rebum justo et ipsum est est vero elitr nulla et et laoreet kasd nonummy at feugiat ea.
 Diam iusto sed tation diam lorem.
 Et at accusam justo gubergren kasd sanctus accusam clita nihil eos.
