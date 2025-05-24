@@ -15,8 +15,9 @@
     --columns-padding: 25px 35px 25px 35px;
     --footer-padding: 10px 50px 10px 50px;
 
-    --content-mobile-padding: 25px 20px 25px 20px;
     --header-mobile-padding: 25px 25px 25px 25px;
+    --content-mobile-padding: 5px 20px 5px 20px;
+    --columns-mobile-padding: 5px 35px 5px 35px;
 }
 
 @font-face {
@@ -42,7 +43,7 @@ html, body {
     color: var(--primary-color);
 }
 
-p {
+#header p {
     margin-top: 4px;
     margin-bottom: 4px;
 }
@@ -53,6 +54,11 @@ a {
 
 a:hover {
     color: var(--secondary-alt-color);
+}
+
+h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
 }
 
 ul {
@@ -66,6 +72,25 @@ li::marker {
 span {
     color: var(--primary-alt-color);
 }
+
+
+sup {
+    font-weight: bold;
+    font-size: 0.8em;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+sup::before {
+    content: "[";
+    margin-right: 1px;
+}
+
+sup::after {
+    content: "]";
+    margin-left: 1px;
+}
+
 
 code {
     background-color: var(--background-color);
@@ -176,6 +201,7 @@ footer {
         /* Can enable or disable depending on if you want sidebars to be hidden on smaller resolution*/
         /*display: none;*/
         font-size: 100%;
+        padding: var(--columns-mobile-padding);
     }
 
     #leftSidebar {
