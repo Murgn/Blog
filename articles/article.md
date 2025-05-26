@@ -1,6 +1,7 @@
 ---
 title: Morgan was Here
 url: morganwashere
+category: ★
 date: xxnd xxx, 20XX
 ---
 

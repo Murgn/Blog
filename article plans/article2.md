@@ -21,3 +21,9 @@ Consequat labore possim in gubergren dolore aliquyam facilisi mazim sit velit sa
 Dolore duo voluptua hendrerit est clita no ut ex labore vero sed lorem.
 Sanctus amet ipsum eros magna ea iusto clita dolor feugiat et nibh sit qui.
 At lorem velit sed.
+
+## Talking points
+* Talk about what i would change, i'd loop through every .html file, storing a reference to them and then doing shit idk im tired im going to bed
+* make sure i include footnotes because they're cool [^1]
+
+[^1]: uhhh uhmm uhhm

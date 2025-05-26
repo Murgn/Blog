@@ -2,8 +2,10 @@
 title: Article3
 url: article3
 date: 23rd May, 2025
+category: programming
 ---
 
+### <span>#{{ category }}</span>
 # {{ title }} <span>// {{ date }}</span>
 Eros elit voluptua et ipsum diam at eleifend dolor amet labore nulla.
 Magna ut diam consetetur sed dolore sed lorem kasd ipsum.
