@@ -20,3 +20,4 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./build
         publish_branch: gh_pages
+        cname: blog.murgn.com
