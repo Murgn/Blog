@@ -10,7 +10,7 @@
     --background-alt-color: #2c2c2a;
 
     /* top, right, bottom, left */
-    --header-padding: 25px 50px 25px 50px;
+    --header-padding: 25px 50px 50px 50px;
     --content-padding: 25px 25px 25px 25px;
     --columns-padding: 25px 35px 25px 35px;
     --footer-padding: 10px 50px 10px 50px;
@@ -56,13 +56,18 @@ a:hover {
     color: var(--secondary-alt-color);
 }
 
-h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.5em;   
 }
 
 ul {
     list-style-type: "// ";
+}
+
+li.kilosite-subheading {
+    list-style-type: "";
+    padding-left: -24px; margin-left: -24px;
 }
 
 li::marker {
@@ -127,6 +132,16 @@ code.hljs{
 
 .horizontal-list li {
     margin-right: 2.1em;
+}
+
+.centered
+{
+    display: block;
+    margin: auto;
+}
+
+img {
+    max-width: 100%;
 }
 
 /*                                                                            */
