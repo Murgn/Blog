@@ -28,20 +28,44 @@
         <main>
             <h1 id="kilosite-23rd-may-2025">kilosite <span>// 23rd May, 2025</span></h1>
 <h3 id="the-static-site-generator-to-rule-them-all"><span>the static site generator to rule them all!</span></h3>
-<p>Magna dolor dolor nulla ut.
-Tempor nulla lorem possim voluptua eu aliquam vel est.
-Diam sed nonumy eum no est.
-Ipsum nulla tempor vulputate et kasd vel.
-Aliquyam elitr te magna tempor vero sadipscing accusam sed esse ut ipsum et.
-Vero lorem erat diam stet est accumsan gubergren et tincidunt diam velit doming laoreet vulputate lorem kasd sanctus.
-Voluptua ipsum veniam dolor et magna duis facilisi rebum et eirmod duis dolor ipsum erat accumsan ex euismod.
-Duo at duo nulla labore kasd iusto est ut sit praesent sea eum erat at sit aliquyam ut nonummy.
-Sit option illum vel aliquyam duo et zzril iriure laoreet erat cum at elitr.
-Diam sit et sit sadipscing suscipit at.
-Consequat labore possim in gubergren dolore aliquyam facilisi mazim sit velit sadipscing amet et rebum dolor nonumy qui accumsan.
-Dolore duo voluptua hendrerit est clita no ut ex labore vero sed lorem.
-Sanctus amet ipsum eros magna ea iusto clita dolor feugiat et nibh sit qui.
-At lorem velit sed.</p>
+<p>For the past few months I've been trying to gain my programming independence from Unity by creating new projects outside of my comfort zone, this is the tale of one such project.</p>
+<p>I was bored and trying to think of something fun that could be completed relatively quickly when I thought it'd be cool to have a corner of the internet to write about whatever I wanted, whenever I wanted.<br />
+I knew I needed an area to host this place, I could've utilised <a href="https://neocities.org/">neocities</a> or <a href="https://spacehey.com/">spacehey</a><a id="fnref:1" href="#fn:1" class="footnote-ref"><sup>1</sup></a> however I thought it'd be more engaging to create my own site and a static site generator alongside it. Coming from knowing nothing I did a bit of research.<a id="fnref:2" href="#fn:2" class="footnote-ref"><sup>2</sup></a> It looked like Python was a language people liked to use when making something like this, and although I was trying to challenge myself, I like C# too much to depart from it just yet. It also had some nice nuget packages I could use to my advantage when working with something like this.</p>
+<p>I came up with kilosite's name quite quickly, &quot;kilo&quot; meaning thousand, combined with site to create &quot;thousand site&quot; which represents one of it's core values of being able to be used for multiple purposes to create whatever the user wants a thousand times over.</p>
+<h3 id="implementation">Implementation</h3>
+<p>FYI I've never used any other static site generators prior to this. I know the names of some that exist, like Jekyll, Hugo and Hexo but that's as far as my knowledge goes. Saying that, I did know what I wanted the base implementation to be:</p>
+<pre><code class="language-shell"> $ ./kilosite.exe &lt;create | newpost | build&gt; &lt;project_name&gt;
+</code></pre>
+<p>These are the only commands that I think I'd need, something to create a new blog, something to create a templated article and something to build everything to a html, website-ready state.</p>
+<h3 id="creating-a-blog">Creating a blog</h3>
+<p>This was the part I enjoyed the most, I spent some time creating a template site, provided to kilosite which is used as the basis for each new project. My knowledge with web-dev in general is pretty limited however I took a lot of reference from my neocities page,<a id="fnref:3" href="#fn:3" class="footnote-ref"><sup>3</sup></a> creating a layout that's clean, responds well on mobile screens and is easy for new users to manipulate and build their blogs off of.</p>
+<p>Each new article is generated with some YAML tags; an article name, url, data and category alongside some headers and lorem ipsum to pad out the page. Users can then fill out this config with whatever key and values they want and add correlating <code>{{{ key }}}</code> tags in their markdown which kilosite will then scan and automatically replace.</p>
+<h3 id="looking-back">Looking back</h3>
+<p>Now I know slightly more what I'm doing, if I were to rewrite kilosite I'd probably allow for a few changes, the way I handle YAML is slightly messy and involves a lot of back and forth. I'd probably scan through all the articles, storing their data earlier and then handling everything that's needed. It'd also be interesting to add support for extensions. I noticed this when I added code highlighting support which allows for nice things</p>
+<pre><code class="language-csharp">// like this:
+private static void Main()
+{
+    Console.WriteLine(&quot;#kilositerulezz&quot;);
+}
+</code></pre>
+<p>It added a bit of untidy code in the main file which I didn't like too much, I'd rather have a bunch of 'em and loop through each one executing different functions. This could nicely tie in to a plan I had for an overall YAML config file which would allow for extra customization, and the enabling/disabling of different extensions.<br />
+Also probably should have used timestamps instead of strings for article dates which would allow for further customization. ;^)</p>
+<p>Now kilosite is in a MVP state, I'm happy with what it became although I'm not sure how much more I'll work on it, but that's the beauty of open-source. If anyone wants to check out the source and modify it feel free to have a gander here: <a href="https://github.com/Murgn/kilosite">https://github.com/Murgn/kilosite</a></p>
+<p>Thanks for reading!</p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn:1">
+<p><a href="https://spacehey.com/">spacehey</a> is a &quot;retro social network&quot; influenced by the myspace era of socialising which actually does have a neat blogging feature.<a href="#fnref:1" class="footnote-back-ref">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://blog.hamaluik.ca/posts/build-your-own-static-site-generator/">Build Your Own Static Site Generator</a>, <a href="https://dev.to/devmount/building-a-static-site-generator-in-3-steps-72e">Building a Static Site Generator in 3 steps</a><a href="#fnref:2" class="footnote-back-ref">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>My neocities page wouldn't be anything without <a href="https://goblin-heart.net/sadgrl">sadgrl.online</a>. Awesome stuff to help beginners with web-dev!<a href="#fnref:3" class="footnote-back-ref">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
         </main>
         <aside id="rightSidebar">
@@ -53,4 +77,7 @@ At lorem velit sed.</p>
     </footer>
 </div>
 </body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/vs2015.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 </html>
